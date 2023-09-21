@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: beige;
+}
+
+.box button{
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+.box button:first-child{
+    background-color: green;
+    color: white;
+}
+.box button:nth-child(2){
+    background-color: red;
+    color: white;
+}
+.box button:nth-child(3){
+    background-color: yellow;
+    color: white;
+    color:black;
+}
+.msgbox{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+    overflow: hidden;
+}
+.tst{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+    color: black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateX(100%);
+    animation: mov 0.3s linear forwards;
+    
+}
+@keyframes mov {
+    100%{transform:translateX(0);
+    }
+    
+}
+.tst i{
+    margin:10px;
+    color: green;
+}
+.error i{
+    color: red;
+}
+.invalid i{
+    color: yellow;
+}
+
+.tst::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 6px;
+    background: green;
+    animation: amin 4s linear forwards;
+}
+@keyframes amin{
+    100%{
+        width: 0;
+    }
+    
+}
+.tst.error::after{
+    background: red;
+}
+.tst.invalid::after{
+    background: yellow;
+}
